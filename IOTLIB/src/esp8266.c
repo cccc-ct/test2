@@ -37,16 +37,6 @@
 
 #define ESP8266_TCPServer_INFO		"AT+CIPSTART=\"TCP\",\"192.168.43.185\",8080\r\n"
 
-#define ESP8266_TCPServer_INFO		"AT+CIPSTART=\"TCP\",\"192.168.43.185\",8080\r\n"
-#define ESP8266_TCPServer_INFO		"AT+CIPSTART=\"TCP\",\"192.168.43.185\",8080\r\n"
-#define ESP8266_TCPServer_INFO		"AT+CIPSTART=\"TCP\",\"192.168.43.185\",8080\r\n"
-#define ESP8266_TCPServer_INFO		"AT+CIPSTART=\"TCP\",\"192.168.43.185\",8080\r\n"
-#define ESP8266_TCPServer_INFO		"AT+CIPSTART=\"TCP\",\"192.168.43.185\",8080\r\n"
-#define ESP8266_TCPServer_INFO		"AT+CIPSTART=\"TCP\",\"192.168.43.185\",8080\r\n"
-#define ESP8266_TCPServer_INFO		"AT+CIPSTART=\"TCP\",\"192.168.43.185\",8080\r\n"
-#define ESP8266_TCPServer_INFO		"AT+CIPSTART=\"TCP\",\"192.168.43.185\",8080\r\n"
-#define ESP8266_TCPServer_INFO		"AT+CIPSTART=\"TCP\",\"192.168.43.185\",8080\r\n"
-
 
 unsigned char esp8266_buf[256];
 unsigned short esp8266_cnt = 0, esp8266_cntPre = 0;
