@@ -41,7 +41,43 @@
 unsigned char esp8266_buf[256];
 unsigned short esp8266_cnt = 0, esp8266_cntPre = 0;
 
+// 全局接收缓冲区（存储ESP8266返回的数据）
+u8 esp8266_recv_buf[512] = {0}; 
+u16 esp8266_recv_len = 0;        // 接收数据长度
 
+// ESP8266接收数据函数实现
+// 参数：recv_buf-外部缓冲区，recv_buf_len-缓冲区长度
+// 返回值：1-接收成功，0-接收失败
+u8 ESP8266_ReceiveData(char *recv_buf, u16 recv_buf_len)
+{
+    u16 timeout = 5000; // 接收超时时间（5000ms）
+    esp8266_recv_len = 0;
+    memset(esp8266_recv_buf, 0, sizeof(esp8266_recv_buf)); // 清空内部缓冲区
+    
+    // 等待接收数据（或超时）
+    while(timeout--)
+    {
+        if(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == SET) // USART2有数据接收
+        {
+            esp8266_recv_buf[esp8266_recv_len++] = USART_ReceiveData(USART2);
+            // 防止缓冲区溢出
+            if(esp8266_recv_len >= sizeof(esp8266_recv_buf) - 1) break;
+        }
+        delay_ms(1); // 每次循环延时1ms
+    }
+    
+    // 接收超时/无数据
+    if(esp8266_recv_len == 0) 
+    {
+        return 0;
+    }
+    
+    // 将内部缓冲区的数据拷贝到外部缓冲区（用户传入的recv_buf）
+    memset(recv_buf, 0, recv_buf_len);
+    strncpy(recv_buf, (char *)esp8266_recv_buf, recv_buf_len - 1);
+    
+    return 1; // 接收成功
+}
 //==========================================================
 //	函数名称：	ESP8266_Clear
 //

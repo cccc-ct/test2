@@ -29,8 +29,8 @@
 .\objects\esp8266.o: ..\..\IOTLIB\inc\stm32f10x_wwdg.h
 .\objects\esp8266.o: ..\..\IOTLIB\inc\misc.h
 .\objects\esp8266.o: ..\..\IOTLIB\inc\esp8266.h
-.\objects\esp8266.o: ..\..\IOTLIB\inc\delay.h
 .\objects\esp8266.o: ..\..\IOTLIB\inc\sys.h
+.\objects\esp8266.o: ..\..\IOTLIB\inc\delay.h
 .\objects\esp8266.o: ..\..\IOTLIB\inc\usart.h
 .\objects\esp8266.o: D:\QianRuShi\MDK\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\esp8266.o: D:\QianRuShi\MDK\ARM\ARMCC\Bin\..\include\stdlib.h

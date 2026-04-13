@@ -14,10 +14,10 @@
 #define RELAYPORT5	GPIOB	//定义IO接口
 #define RELAY5	GPIO_Pin_9	//定义IO接口 Relay Signal Pin connects to STM32 B9 Pin
 void RELAY_Init(void);//继电器初始化
-void RELAY_1(u8 c);//继电器控制1
-void RELAY_2(u8 c);//继电器控制2
-void RELAY_3(u8 c);//继电器控制3
-void RELAY_4(u8 c);//继电器控制4	
-void RELAY_5(u8 c);//继电器控制5
+void RELAY_1(u8 c);//继电器控制灯带
+void RELAY_2(u8 c);//继电器控制加水水泵
+void RELAY_3(u8 c);//继电器控制营养液水泵
+void RELAY_4(u8 c);//继电器控制加湿器
+void RELAY_5(u8 c);//继电器控制风扇
 
 #endif

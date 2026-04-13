@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
 D:\20220865206\iot\SmartIOTDevices\USER\STM32TestRelay\STM32TestRelay.uvprojx
-Project File Date:  12/19/2025
+Project File Date:  04/06/2026
 
 <h2>Output:</h2>
 Rebuild target 'STM32'
@@ -32,11 +32,23 @@ compiling main.c...
   #endif
 ..\..\IOTLIB\inc\ec_sensor.h(30): warning:  #1-D: last line of file ends without a newline
   #endif /* __EC_SENSOR_H */
-main.c(61): warning:  #223-D: function "ESP8266_SendCmd" declared implicitly
+main.c(142): warning:  #223-D: function "ESP8266_SendCmd" declared implicitly
         if(ESP8266_SendCmd("AT+CIPSTATUS\r\n", "CONNECT"))
-main.c(125): warning:  #1-D: last line of file ends without a newline
+main.c(144): warning:  #870-D: invalid multibyte character sequence
+                USART1_printf("TCP连接已断开，开始重�?..\r\n");
+main.c(221): warning:  #870-D: invalid multibyte character sequence
+                                                USART1_printf("温度�?.1f C，湿度：%.1f  \r\n", t,h);
+main.c(223): warning:  #870-D: invalid multibyte character sequence
+                                                USART1_printf("光照强度�?d lux\r\n", light_lux);
+main.c(233): warning:  #870-D: invalid multibyte character sequence
+                                USART1_printf("数据上传成功�?s\r\n\r\n", post_buf);
+main.c(239): warning:  #870-D: invalid multibyte character sequence
+                        USART1_printf("请求继电器状�?..\r\n");
+main.c(248): warning:  #870-D: invalid multibyte character sequence
+                                USART1_printf("状态请求成功，返回数据�?s\r\n", recv_buf);
+main.c(264): warning:  #1-D: last line of file ends without a newline
   }
-main.c: 4 warnings, 0 errors
+main.c: 10 warnings, 0 errors
 compiling stm32f10x_it.c...
 compiling system_stm32f10x.c...
 compiling delay.c...
@@ -97,9 +109,9 @@ compiling IIC.c...
 compiling esp8266.c...
 assembling startup_stm32f10x_md.s...
 linking...
-Program Size: Code=17558 RO-data=970 RW-data=84 ZI-data=1916  
+Program Size: Code=20634 RO-data=1050 RW-data=96 ZI-data=2520  
 FromELF: creating hex file...
-".\Objects\STM32TestRelay.axf" - 0 Error(s), 12 Warning(s).
+".\Objects\STM32TestRelay.axf" - 0 Error(s), 18 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   D:\20220865206\iot\SmartIOTDevices\USER\STM32TestRelay\RTE
